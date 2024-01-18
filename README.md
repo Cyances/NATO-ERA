@@ -10,7 +10,7 @@ Special thanks to thebeninator for the coding and modelling advice for this mod.
 	<li>Configurable ERA performance</li>
 	<li>Configurable ERA color (so you can match it to the custom skins you have)</li>
 	<li>Compatible with vanilla Abrams, and modded M1A1 Abrams and M1A1 Abrams AMP</li>
-	<li>Only the ARAT-1 bricks are modelled to minimize potential performance hit</li>
+	<li>Only the ARAT-1 bricks are modelled, not the custom skirts to minimize potential performance hit</li>
  	</ul>
 </p>
 
