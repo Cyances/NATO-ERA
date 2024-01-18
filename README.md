@@ -42,3 +42,7 @@ A mod to add configurable ERA to NATO armor
 | M1IP Turret Roof ERA | false |  |
 | M1IP Turret Cheek ERA | false |  |
 | M1IP Extended Turret ERA | false |  |
+| - | - | - |
+| Improved CE Protection | false |  |
+| Improved KE Protection | false |  |
+| ARAT color | 71, 80, 65 | RGB values |
