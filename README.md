@@ -18,10 +18,11 @@ Special thanks to thebeninator for the coding and modelling advice for this mod.
 
 2.) Download NatoERA.dll and NatoEraAssets.tar or .zip from the [release page](https://github.com/Cyances/NATO-ERA/releases)
 
-3.) Place the files in the manner below:
+3.) Rename NatoERA.dll to !NatoERA.dll (note of the exclamation mark at the start)
 
-
-
+4.) Place the files in the manner below:
+![Mods Folder](https://github.com/Cyances/NATO-ERA/blob/main/Images/Mods%20Folder.PNG)
+![NatoAssetsEra Folder](https://github.com/Cyances/NATO-ERA/blob/main/Images/NatoEraAssets%20Folder.PNG)
 
 ## ERA Performance:
 | Type  | Protection vs KE (mm) | Protection vs CE (mm) | Note
