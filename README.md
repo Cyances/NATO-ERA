@@ -21,6 +21,7 @@ Special thanks to thebeninator for the coding and modelling advice for this mod.
 3.) Rename NatoERA.dll to !NatoERA.dll (note of the exclamation mark at the start)
 
 4.) Place the files in the manner below:
+
 ![Mods Folder](https://github.com/Cyances/NATO-ERA/blob/main/Images/Mods%20Folder.PNG)
 ![NatoAssetsEra Folder](https://github.com/Cyances/NATO-ERA/blob/main/Images/NatoEraAssets%20Folder.PNG)
 
