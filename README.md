@@ -16,7 +16,11 @@ Special thanks to thebeninator for the coding and modelling advice for this mod.
 ## Installation:
 1.) Install [MelonLoader](https://github.com/LavaGang/MelonLoader/)
 
-2.) Download !NatoERA.dll and 
+2.) Download NatoERA.dll and NatoEraAssets.tar or .zip from the [release page](https://github.com/Cyances/NATO-ERA/releases)
+
+3.) Place the files in the manner below:
+
+
 
 
 ## ERA Performance:
