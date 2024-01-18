@@ -46,3 +46,5 @@ Special thanks to thebeninator for the coding and modelling advice for this mod.
 | Improved CE Protection | false |  |
 | Improved KE Protection | false |  |
 | ARAT color | 71, 80, 65 | RGB values |
+
+Apart from ARAT protection type and colors, the ERA arrangment for the Abrams can be changed when (re)loading missions.
