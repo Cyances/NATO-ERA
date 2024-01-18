@@ -14,16 +14,18 @@ Special thanks to thebeninator for the coding and modelling advice for this mod.
 </p>
 
 ## Installation:
-1.) Install [MelonLoader](https://github.com/LavaGang/MelonLoader/)
+1.) Install [MelonLoader](https://github.com/LavaGang/MelonLoader/).
 
-2.) Download NatoERA.dll and NatoEraAssets.tar or .zip from the [release page](https://github.com/Cyances/NATO-ERA/releases)
+2.) Download NatoERA.dll and NatoEraAssets.tar or .zip from the [release page](https://github.com/Cyances/NATO-ERA/releases).
 
-3.) Rename NatoERA.dll to !NatoERA.dll (note of the exclamation mark at the start)
+3.) Rename NatoERA.dll to <b>!NatoERA.dll</b> (note of the exclamation mark at the start). This is important for mod compatibility.
 
 4.) Place the files in the manner below:
 
 ![Mods Folder](https://github.com/Cyances/NATO-ERA/blob/main/Images/Mods%20Folder.PNG)
 ![NatoAssetsEra Folder](https://github.com/Cyances/NATO-ERA/blob/main/Images/NatoEraAssets%20Folder.PNG)
+
+5. Launch the game
 
 ## ERA Performance:
 | Type  | Protection vs KE (mm) | Protection vs CE (mm) | Note
