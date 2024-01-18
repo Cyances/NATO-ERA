@@ -21,7 +21,7 @@ A mod to add configurable ERA to NATO armor
 </p>
 
 
-##Mod Confiugration(in UserData/MelonPreferences.cfg):
+## Mod Configuration(in UserData/MelonPreferences.cfg):
 
 ### Heavy Common (HC) - roughly 25% increase in protection
 | Option  | Default behavior | Note
