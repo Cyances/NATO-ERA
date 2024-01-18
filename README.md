@@ -25,20 +25,20 @@ A mod to add configurable ERA to NATO armor
 
 | Option  | Default config | Note
 | ------------- | ------------- | ------------- | 
-| M1 ERA  | true | hull sides array |
+| M1 ERA  | true | Hull sides array. Also master option to show ERA or not regardless of config below. |
 | M1 Hull Lower Front ERA  | false  |  |
 | M1 Hull Upper Front ERA  | false  |  |
 | M1 Extended Hull ERA | false  |  |
-| M1 Turret ERA | false | turret sides array |
+| M1 Turret ERA | false | Turret sides array. Also master option to show other turret ERA arrays or not regardless of config below. |
 | M1 Turret Roof ERA | false |  |
 | M1 Turret Cheek ERA | false |  |
 | M1 Extended Turret ERA | false |  |
 | - | - | - |
-| M1IP ERA  | true | hull sides array |
+| M1IP ERA  | true | Hull sides array. Also master option to show ERA or not regardless of config below. |
 | M1IP Hull Lower Front ERA  | false  |  |
 | M1IP Hull Upper Front ERA  | false  |  |
 | M1IP Extended Hull ERA | false  |  |
-| M1IP Turret ERA | false | turret sides array |
+| M1IP Turret ERA | false | Turret sides array. Also master option to show other turret ERA arrays or not regardless of config below. |
 | M1IP Turret Roof ERA | false |  |
 | M1IP Turret Cheek ERA | false |  |
 | M1IP Extended Turret ERA | false |  |
