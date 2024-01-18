@@ -38,7 +38,7 @@ namespace NatoEra
             betterCEP = cfg.CreateEntry<bool>("Improve CE Protection (600mm)", false);
             betterCEP.Description = "Improve ARAT Protection";
             betterKEP = cfg.CreateEntry<bool>("Improve KE Protection (150mm)", false);
-            arat_R = cfg.CreateEntry<float>("R", 71); //Army green default (thanks to Doc for finding the color codes)
+            arat_R = cfg.CreateEntry<float>("R", 70); //Army green default (thanks to Doc for finding the color codes)
             arat_R.Description = "Adjust ARAT colors with RGB values (float)";
             arat_G = cfg.CreateEntry<float>("G", 80);
             arat_B = cfg.CreateEntry<float>("B", 65);
