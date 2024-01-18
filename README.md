@@ -21,13 +21,24 @@ A mod to add configurable ERA to NATO armor
 </p>
 
 
-## Mod Configuration(in UserData/MelonPreferences.cfg):
+## Mod Configuration (in UserData/MelonPreferences.cfg):
 
-### Heavy Common (HC) - roughly 25% increase in protection
-| Option  | Default behavior | Note
+| Option  | Default config | Note
 | ------------- | ------------- | ------------- | 
-| Hull front | 510  | 1030  |
-| Turret cheek | 600 | 1300 | 
-| Turret side | 430 | 480 | 
-| Composite side skirt | 90 | 125 | 
-| Gun mantlet | 565 | 910 | 
+| M1 ERA  | true | hull sides array |
+| M1 Hull Lower Front ERA  | false  |  |
+| M1 Hull Upper Front ERA  | false  |  |
+| M1 Extended Hull ERA | false  |  |
+| M1 Turret ERA | false | turret sides array |
+| M1 Turret Roof ERA | false |  |
+| M1 Turret Cheek ERA | false |  |
+| M1 Extended Turret ERA | false |  |
+| - | - | - |
+| M1IP ERA  | true | hull sides array |
+| M1IP Hull Lower Front ERA  | false  |  |
+| M1IP Hull Upper Front ERA  | false  |  |
+| M1IP Extended Hull ERA | false  |  |
+| M1IP Turret ERA | false | turret sides array |
+| M1IP Turret Roof ERA | false |  |
+| M1IP Turret Cheek ERA | false |  |
+| M1IP Extended Turret ERA | false |  |
