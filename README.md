@@ -66,7 +66,7 @@ Special thanks to thebeninator for the coding and modelling advice for this mod.
 | - | - | - |
 | Improved CE Protection | false |  |
 | Improved KE Protection | false |  |
-| ARAT color | 71, 80, 65 | RGB values |
+| ARAT color | 71, 80, 65 | RGB values. Army green as default. |
 
 The ERA arrangment for the Abrams can be changed when (re)loading missions without restarting the game. Simply alt tab to edit the .cfg file, save the file then restart the mission or start a new one. However, to see updated ARAT performance or color, the game needs to be restarted.
 
