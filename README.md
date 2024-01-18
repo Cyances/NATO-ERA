@@ -34,7 +34,7 @@ Special thanks to thebeninator for the coding and 3d modelling advice for this m
 
 5.) Launch the game.
    
-7.) On first time running this mod, the entries in MelonPreferences.cfg will only appear after launching the game then closing it.
+6.) On first time running this mod, the entries in MelonPreferences.cfg will only appear after launching the game then closing it.
 
 ## ERA Performance:
 | Type  | Protection vs KE (mm) | Protection vs CE (mm) | Note
