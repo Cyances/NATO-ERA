@@ -24,7 +24,7 @@ Special thanks to thebeninator for the coding and modelling advice for this mod.
 
 2.) Download NatoERA.dll and NatoEraAssets.tar or .zip from the [release page](https://github.com/Cyances/NATO-ERA/releases).
 
-3.) Rename NatoERA.dll to <b>!NatoERA.dll</b> (note of the exclamation mark at the start). This is important for mod compatibility.
+3.) Rename NatoERA.dll to <b>!NatoERA.dll</b> (note the exclamation mark at the start). This is important for mod compatibility.
 
 4.) Place the files in the manner below:
 
