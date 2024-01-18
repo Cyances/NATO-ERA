@@ -1,4 +1,4 @@
-# NATO ERA v1.0
+# NATO ERA v1.0 (Initial Release)
 
 Special thanks to thebeninator for the coding and modelling advice for this mod.
 
