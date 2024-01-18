@@ -68,6 +68,6 @@ Special thanks to thebeninator for the coding and modelling advice for this mod.
 | Improved KE Protection | false |  |
 | ARAT color | 71, 80, 65 | RGB values |
 
-The ERA arrangment for the Abrams can be changed when (re)loading missions without restarting the game (alt tab to edit the .cfg file then simply save). But to see update ARAT performance or color, a game restart is required.
+The ERA arrangment for the Abrams can be changed when (re)loading missions without restarting the game. Simply alt tab to edit the .cfg file, save the file then restart the mission or start a new one. However, to see updated ARAT performance or color, the game needs to be restarted.
 
 ![Configuration File](https://github.com/Cyances/NATO-ERA/blob/main/Images/NATO%20ERA%20MelonPreferences.PNG)
