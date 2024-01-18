@@ -2,18 +2,25 @@
 
 Special thanks to thebeninator for the coding and modelling advice for this mod.
 
-
-
 ## Features:
 <p>
 	<ul>
 	<li>Adds configurable ARAT-1 ERA to M1/IP Abrams</li>
 	<li>Configurable ERA arrangement</li>
 	<li>Configurable ERA performance</li>
-	<li>Configruable ERA color (so you can match it to the custom skins you have)</li>
+	<li>Configurable ERA color (so you can match it to the custom skins you have)</li>
 	<li>Compatible with vanilla Abrams, and modded M1A1 Abrams and M1A1 Abrams AMP</li>
  	</ul>
 </p>
+
+## Features:
+
+	<li>Adds configurable ARAT-1 ERA to M1/IP Abrams</li>
+	<li>Configurable ERA arrangement</li>
+	<li>Configurable ERA performance</li>
+	<li>Configurable ERA color (so you can match it to the custom skins you have)</li>
+	<li>Compatible with vanilla Abrams, and modded M1A1 Abrams and M1A1 Abrams AMP</li>
+
 
 ## ERA Performance:
 | Type  | Protection vs KE (mm) | Protection vs CE (mm) | Note
