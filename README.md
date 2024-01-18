@@ -7,7 +7,10 @@ Special thanks to thebeninator for the coding and modelling advice for this mod.
 ## Features:
 <p>
 	<ul>
-	<li>Add configurable ERA to NATO armor</li>
+	<li>Adds configurable ERA to M1/IP Abrams</li>
+	<li>Configurable ERA arrangement</li>
+	<li>Configurable ERA performance</li>
+	<li>Configruable ERA color (so you can match it to the custom skins you have)</li>
  	</ul>
 </p>
 
