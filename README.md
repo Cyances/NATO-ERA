@@ -23,9 +23,9 @@ Special thanks to thebeninator for the coding and 3d modelling advice for this m
 ## Installation:
 1.) Install [MelonLoader](https://github.com/LavaGang/MelonLoader/).
 
-2.) Download NatoERA.dll and NatoEraAssets.tar or .zip from the [release page](https://github.com/Cyances/NATO-ERA/releases).
+2.) Download NatoERA.dll or 1NatoERA.dll and NatoEraAssets.tar or .zip from the [release page](https://github.com/Cyances/NATO-ERA/releases).
 
-3.) Rename NatoERA.dll to <b>!NatoERA.dll</b> (note the exclamation mark at the start). This is important for mod compatibility.
+3.) If you downloaded NatoERA.dll, rename it to <b>!NatoERA.dll</b> (note the exclamation mark at the start). This is important for mod compatibility.
 
 4.) Place the files in the manner below:
 
