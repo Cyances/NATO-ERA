@@ -11,7 +11,7 @@ using UnityEngine;
 using GHPC.Camera;
 using GHPC.Player;
 
-[assembly: MelonInfo(typeof(AbramsAMPMod), "NATO ERA", "1.0", "Cyance")]
+[assembly: MelonInfo(typeof(AbramsAMPMod), "NATO ERA", "1.1", "Cyance")]
 [assembly: MelonGame("Radian Simulations LLC", "GHPC")]
 
 namespace NatoEra
