@@ -28,16 +28,16 @@ namespace NatoEra
         private static Texture concrete_tex_normal;
 
         ////MelonPreferences.cfg variables
-        static MelonPreferences_Entry<bool> betterCEP;
-        static MelonPreferences_Entry<bool> betterKEP;
+        static MelonPreferences_Entry<bool> betterARAT_CEP;
+        static MelonPreferences_Entry<bool> betterARAT_KEP;
         static MelonPreferences_Entry<float> arat_R;
         static MelonPreferences_Entry<float> arat_G;
         static MelonPreferences_Entry<float> arat_B;
         public static void Config(MelonPreferences_Category cfg)
         {
-            betterCEP = cfg.CreateEntry<bool>("Improve CE Protection (600mm)", false);
-            betterCEP.Description = "Improve ARAT Protection";
-            betterKEP = cfg.CreateEntry<bool>("Improve KE Protection (150mm)", false);
+            betterARAT_CEP = cfg.CreateEntry<bool>("Improve CE Protection (600mm)", false);
+            betterARAT_CEP.Description = "Improve ARAT Protection";
+            betterARAT_KEP = cfg.CreateEntry<bool>("Improve KE Protection (150mm)", false);
             arat_R = cfg.CreateEntry<float>("R", 71); //Army green default (thanks to Doc for finding the color codes)
             arat_R.Description = "Adjust ARAT colors with RGB values (float)";
             arat_G = cfg.CreateEntry<float>("G", 80);
@@ -50,9 +50,9 @@ namespace NatoEra
             float arat_Green = arat_G.Value / 255f;
             float arat_Blue = arat_B.Value / 255f;
             UnityEngine.Color colour_primary = new UnityEngine.Color(arat_Red, arat_Green, arat_Blue);
-            MelonLogger.Msg("Red value: " + arat_Red);
-            MelonLogger.Msg("Green value: " + arat_Green);
-            MelonLogger.Msg("Blue value: " + arat_Blue);
+            MelonLogger.Msg("ARAT Red value: " + arat_Red);
+            MelonLogger.Msg("ARAT Green value: " + arat_Green);
+            MelonLogger.Msg("ARAT Blue value: " + arat_Blue);
             UnityEngine.Color[] colours = new UnityEngine.Color[] { colour_primary };
 
             foreach (Transform transform in era_transforms)
@@ -62,8 +62,8 @@ namespace NatoEra
                 transform.gameObject.AddComponent<UniformArmor>();
                 UniformArmor armor = transform.gameObject.GetComponent<UniformArmor>();
                 armor.SetName("ARAT-1");
-                armor.PrimaryHeatRha = betterCEP.Value ? 600f : 450f;
-                armor.PrimarySabotRha = betterKEP.Value ? 150f : 30f;
+                armor.PrimaryHeatRha = betterARAT_CEP.Value ? 600f : 450f;
+                armor.PrimarySabotRha = betterARAT_KEP.Value ? 150f : 30f;
                 armor.SecondaryHeatRha = 0f;
                 armor.SecondarySabotRha = 0f;
                 armor._canShatterLongRods = true;
@@ -131,7 +131,7 @@ namespace NatoEra
     }
 
     [HarmonyPatch(typeof(GHPC.Weapons.LiveRound), "penCheck")]
-    public class InsensitiveERA
+    public class InsensitiveARAT
     {
         private static float pen_threshold = 30f;
         private static float caliber_threshold = 20f;
