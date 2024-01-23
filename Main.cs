@@ -37,6 +37,10 @@ namespace NatoEra
             MelonPreferences_Category cfg = MelonPreferences.CreateCategory("NATOERAConfig");
             M1Abrams.Config(cfg);
             ARAT.Config(cfg);
+            M2Bradley.Config(cfg);
+            BRAT.Config(cfg);
+            //M60.Config(cfg);
+            //PRAT.Config(cfg);
         }
 
         public override void OnSceneWasLoaded(int idx, string scene_name)
@@ -50,6 +54,10 @@ namespace NatoEra
             StateController.RunOrDefer(GameState.GameReady, new GameStateEventHandler(GetVics), GameStatePriority.Low);
             M1Abrams.Init();
             ARAT.Init();
+            M2Bradley.Init();
+            BRAT.Init();
+            //M60.Init();
+            //PRAT.Init();
         }
     }
 }

@@ -79,6 +79,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BRAT.cs" />
+    <Compile Include="M2Bradley.cs" />
     <Compile Include="M60.cs" />
     <Compile Include="PRAT.cs" />
     <Compile Include="ARAT.cs" />
