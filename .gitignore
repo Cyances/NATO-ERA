@@ -3,10 +3,10 @@
 *.dll
 *.pdb
 *.xml
-*.cs
 *.cache
 *.CopyComplete
 .vs/NatoERA/v17/.suo
 obj/Debug/NatoERA.csproj.FileListAbsolute.txt
 *.json
 *.vsidx
+obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
