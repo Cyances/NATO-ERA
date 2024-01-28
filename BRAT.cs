@@ -26,16 +26,20 @@ namespace NatoEra
         private static Texture concrete_tex_normal;
 
         ////MelonPreferences.cfg variables
-        static MelonPreferences_Entry<bool> betterBRAT_CEP;
-        static MelonPreferences_Entry<bool> betterBRAT_KEP;
+        static MelonPreferences_Entry<bool> betterBRATm3_CEP;
+        static MelonPreferences_Entry<bool> betterBRATm3_KEP;
+        static MelonPreferences_Entry<bool> betterBRATm5_CEP;
+        static MelonPreferences_Entry<bool> betterBRATm5_KEP;
         static MelonPreferences_Entry<float> brat_R;
         static MelonPreferences_Entry<float> brat_G;
         static MelonPreferences_Entry<float> brat_B;
         public static void Config(MelonPreferences_Category cfg)
         {
-            betterBRAT_CEP = cfg.CreateEntry<bool>("Improve BRAT CE Protection (600/800mm)", false);
-            betterBRAT_CEP.Description = "Improve BRAT Protection";
-            betterBRAT_KEP = cfg.CreateEntry<bool>("Improve BRAT KE Protection (150/200mm)", false);
+            betterBRATm3_CEP = cfg.CreateEntry<bool>("Improve BRAT-M3 CE Protection (600mm)", false);
+            betterBRATm3_CEP.Description = "Improve BRAT Protection";
+            betterBRATm3_KEP = cfg.CreateEntry<bool>("Improve BRAT-M3 KE Protection (150mm)", false);
+            betterBRATm5_CEP = cfg.CreateEntry<bool>("Improve BRAT-M5 CE Protection (800mm)", false);
+            betterBRATm5_KEP = cfg.CreateEntry<bool>("Improve BRAT-M5 KE Protection (200mm)", false);
             brat_R = cfg.CreateEntry<float>("BRAT R", 71); //Army green default (thanks to Doc for finding the color codes)
             brat_R.Description = "Adjust BRAT colors with RGB values (float)";
             brat_G = cfg.CreateEntry<float>("BRAT G", 80);
@@ -60,8 +64,8 @@ namespace NatoEra
                 transform.gameObject.AddComponent<UniformArmor>();
                 UniformArmor armor = transform.gameObject.GetComponent<UniformArmor>();
                 armor.SetName("BRAT-M5");
-                armor.PrimaryHeatRha = betterBRAT_CEP.Value ? 800f : 600f;
-                armor.PrimarySabotRha = betterBRAT_KEP.Value ? 200f : 45f;
+                armor.PrimaryHeatRha = betterBRATm5_CEP.Value ? 800f : 600f;
+                armor.PrimarySabotRha = betterBRATm5_KEP.Value ? 200f : 45f;
                 armor.SecondaryHeatRha = 0f;
                 armor.SecondarySabotRha = 0f;
                 armor._canShatterLongRods = true;
@@ -95,8 +99,8 @@ namespace NatoEra
                 transform.gameObject.AddComponent<UniformArmor>();
                 UniformArmor armor = transform.gameObject.GetComponent<UniformArmor>();
                 armor.SetName("BRAT-M3");
-                armor.PrimaryHeatRha = betterBRAT_CEP.Value ? 600f : 450f;
-                armor.PrimarySabotRha = betterBRAT_KEP.Value ? 150f : 30f;
+                armor.PrimaryHeatRha = betterBRATm3_CEP.Value ? 600f : 450f;
+                armor.PrimarySabotRha = betterBRATm3_KEP.Value ? 150f : 30f;
                 armor.SecondaryHeatRha = 0f;
                 armor.SecondarySabotRha = 0f;
                 armor._canShatterLongRods = true;
