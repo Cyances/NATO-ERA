@@ -18,7 +18,7 @@ Special thanks to thebeninator for the coding and 3d modelling advice for this m
 ## NOTE!:
 <p>
 	<ul>
-	<li>The BRAT currently has an issue where it does not detonate as intended sometimes when hit even with a powerful round such as the 3BM32.</li>
+	<li>The BRAT currently has an issue where it does not detonate as intended sometimes when hit even with a powerful round such as the 3BM32</li>
  	</ul>
 </p>
 
