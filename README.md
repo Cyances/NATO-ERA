@@ -1,40 +1,21 @@
 # NATO ERA v1.1
 
-Special thanks to thebeninator for the coding and 3d modelling advice for this mod.
-
 ## Features:
 <p>
 	<ul>
-	<li>Adds configurable ARAT-1 ERA to M1/IP Abrams</li>
+	<li>Adds configurable BRAT ERA to M2 Bradley</li>
+	<li>Currently modelled the hull array</li>
 	<li>Configurable ERA arrangement</li>
 	<li>Configurable ERA performance</li>
 	<li>Configurable ERA color (so you can match it to the custom skins you have)</li>
-	<li>Compatible with vanilla Abrams, and modded M1A1 Abrams v1.0.9 and M1A1 Abrams AMP v2.2</li>
-	<li>Only the ARAT-1 bricks are modelled, not the custom skirts or anything else to minimize potential performance hit</li>
+	<li>Compatible with vanilla Bradley, and 50mm Bradley, M3A3 Bradley and M6A2 ADATS mods</li>
+	<li>Only the BRAT M3 and M5 bricks are modelled, not the custom skirts or anything else to minimize potential performance hit</li>
+	<li>Triangular pieces such as the M4 brick is not modelled since triangles are not native to Unity Editor</li>
  	</ul>
 </p>
 
 
-![ARAT-1 Standard Array](https://github.com/Cyances/NATO-ERA/blob/main/Images/Standard%20ARAT-1.png)
-![ARAT-1 Arrangements](https://github.com/Cyances/NATO-ERA/blob/main/Images/ARAT-1%20Arrangements.png)
-![Flork Spec](https://github.com/Cyances/NATO-ERA/blob/main/Images/Flork%20Spec.png)
-![Indigo ARAT](https://github.com/Cyances/NATO-ERA/blob/main/Images/Indigo%20ARAT-1.png)
-
-## Installation:
-1.) Install [MelonLoader](https://github.com/LavaGang/MelonLoader/).
-
-2.) Download NatoERA.dll or 1NatoERA.dll and NatoEraAssets.tar or .zip from the [release page](https://github.com/Cyances/NATO-ERA/releases).
-
-3.) If you downloaded NatoERA.dll, rename it to <b>!NatoERA.dll</b> (note the exclamation mark at the start). This is important for mod compatibility.
-
-4.) Place the files in the manner below:
-
-![Mods Folder](https://github.com/Cyances/NATO-ERA/blob/main/Images/Mods%20Folder.PNG)
-![NatoAssetsEra Folder](https://github.com/Cyances/NATO-ERA/blob/main/Images/NatoEraAssets%20Folder.PNG)
-
-5.) Launch the game.
-   
-6.) On first time running this mod, the entries in MelonPreferences.cfg will only appear after launching the game then closing it.
+![BRAT Standard Array](https://github.com/Cyances/NATO-ERA/blob/NERA-1.1/Images/Standard%20BRAT.png)
 
 ## ERA Performance:
 | Type  | Protection vs KE (mm) | Protection vs CE (mm) | Note
