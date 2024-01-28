@@ -18,7 +18,7 @@ Special thanks to thebeninator for the coding and 3d modelling advice for this m
 ## NOTE!:
 <p>
 	<ul>
-	<li>Adds configurable ERA to M1/IP Abrams and M2 Bradley</li>
+	<li>The BRAT currently has an issue where it does not detonate as intended when hit even with a powerful round such as the 3BM32.</li>
  	</ul>
 </p>
 
