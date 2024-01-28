@@ -9,3 +9,4 @@
 .vs/NatoERA/v17/.suo
 obj/Debug/NatoERA.csproj.FileListAbsolute.txt
 *.json
+*.vsidx
