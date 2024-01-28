@@ -37,11 +37,11 @@ namespace NatoEra
             showERAm2 = cfg.CreateEntry<bool>("M2 ERA", true);
             showERAm2.Description = "Enable ERA for M2";
 
-            showERAm2_HullSideExtended = cfg.CreateEntry<bool>("M2 Hull Lower Front ERA", false);
+            showERAm2_HullSideExtended = cfg.CreateEntry<bool>("M2 Extended Hull Side ERA", false);
             showERAm2_HullSideExtended.Description = "M2 Hull ERA Arrangement";
             showERAm2_HullSideLower = cfg.CreateEntry<bool>("M2 Hull Side Lower ERA", true);
             showERAm2_HullSideLowerExtended = cfg.CreateEntry<bool>("M2 Extended Hull Side Lower ERA", false);
-            showERAm2_HullLowerFront = cfg.CreateEntry<bool>("M2  Hull Lower Front ERA", false);
+            showERAm2_HullLowerFront = cfg.CreateEntry<bool>("M2 Hull Lower Front ERA", false);
             showERAm2_HullUpper = cfg.CreateEntry<bool>("M2 Hull Upper ERA", false);
         }
 
