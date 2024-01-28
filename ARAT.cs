@@ -133,7 +133,7 @@ namespace NatoEra
     [HarmonyPatch(typeof(GHPC.Weapons.LiveRound), "penCheck")]
     public class InsensitiveARAT
     {
-        private static float pen_threshold = 30f;
+        private static float pen_threshold = 10f;
         private static float caliber_threshold = 20f;
 
         static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)

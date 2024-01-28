@@ -33,9 +33,9 @@ namespace NatoEra
         static MelonPreferences_Entry<float> brat_B;
         public static void Config(MelonPreferences_Category cfg)
         {
-            betterBRAT_CEP = cfg.CreateEntry<bool>("Improve BRAT CE Protection (600mm)", false);
+            betterBRAT_CEP = cfg.CreateEntry<bool>("Improve BRAT CE Protection (600/800mm)", false);
             betterBRAT_CEP.Description = "Improve BRAT Protection";
-            betterBRAT_KEP = cfg.CreateEntry<bool>("Improve BRAT KE Protection (150mm)", false);
+            betterBRAT_KEP = cfg.CreateEntry<bool>("Improve BRAT KE Protection (150/200mm)", false);
             brat_R = cfg.CreateEntry<float>("BRAT R", 71); //Army green default (thanks to Doc for finding the color codes)
             brat_R.Description = "Adjust BRAT colors with RGB values (float)";
             brat_G = cfg.CreateEntry<float>("BRAT G", 80);
@@ -55,13 +55,48 @@ namespace NatoEra
 
             foreach (Transform transform in era_transforms)
             {
-                if (!transform.gameObject.name.Contains("BRAT")) continue;
+                if (!transform.gameObject.name.Contains("BRAT-M5")) continue;
 
                 transform.gameObject.AddComponent<UniformArmor>();
                 UniformArmor armor = transform.gameObject.GetComponent<UniformArmor>();
-                armor.SetName("BRAT");
+                armor.SetName("BRAT-M5");
+                armor.PrimaryHeatRha = betterBRAT_CEP.Value ? 800f : 600f;
+                armor.PrimarySabotRha = betterBRAT_KEP.Value ? 200f : 40f;
+                armor.SecondaryHeatRha = 0f;
+                armor.SecondarySabotRha = 0f;
+                armor._canShatterLongRods = true;
+                armor._crushThicknessModifier = 1f;
+                armor._isEra = true;
+
+                foreach (GameObject s in Resources.FindObjectsOfTypeAll<GameObject>())
+                {
+                    if (s.name == "Autocannon HE Armor Impact") { armor.DetonateEffect = s; break; }
+                }
+
+                armor.UndetonatedObjects = new GameObject[] { armor.gameObject };
+
+                MeshRenderer mesh_renderer = transform.gameObject.GetComponent<MeshRenderer>();
+                mesh_renderer.material = new Material(Shader.Find("Standard (FLIR)"));
+                mesh_renderer.material.mainTexture = concrete_tex;
+                mesh_renderer.material.mainTextureScale = new Vector2(0.07f, 0.07f);
+                mesh_renderer.material.mainTextureOffset = new Vector2(0f, 0f);
+                mesh_renderer.material.EnableKeyword("_NORMALMAP");
+                mesh_renderer.material.SetTexture("_BumpMap", concrete_tex_normal);
+
+                mesh_renderer.material.color = colours[UnityEngine.Random.Range(0, colours.Length)];
+
+                transform.gameObject.AddComponent<HeatSource>();
+            }
+
+            foreach (Transform transform in era_transforms)
+            {
+                if (!transform.gameObject.name.Contains("BRAT-M3")) continue;
+
+                transform.gameObject.AddComponent<UniformArmor>();
+                UniformArmor armor = transform.gameObject.GetComponent<UniformArmor>();
+                armor.SetName("BRAT-M3");
                 armor.PrimaryHeatRha = betterBRAT_CEP.Value ? 600f : 450f;
-                armor.PrimarySabotRha = betterBRAT_KEP.Value ? 150f : 15f;
+                armor.PrimarySabotRha = betterBRAT_KEP.Value ? 150f : 20f;
                 armor.SecondaryHeatRha = 0f;
                 armor.SecondarySabotRha = 0f;
                 armor._canShatterLongRods = true;
@@ -92,10 +127,10 @@ namespace NatoEra
         public static void Init()
         {
 
-            if (BRAT.BRAT_m2_turret_array == null)
+            if (BRAT.BRAT_m2_hull_array == null)
             {
                 var BRAT_bundle_m2_hull = AssetBundle.LoadFromFile(Path.Combine(MelonEnvironment.ModsDirectory + "/NatoEraAssets", "m2_hull_brat"));
-                var BRAT_bundle_m2_turret = AssetBundle.LoadFromFile(Path.Combine(MelonEnvironment.ModsDirectory + "/NatoEraAssets", "m2_turret_brat"));
+                //var BRAT_bundle_m2_turret = AssetBundle.LoadFromFile(Path.Combine(MelonEnvironment.ModsDirectory + "/NatoEraAssets", "m2_turret_brat"));
 
                 foreach (Texture t in Resources.FindObjectsOfTypeAll<Texture>())
                 {
@@ -109,15 +144,13 @@ namespace NatoEra
 
                 BRAT_m2_hull_array = BRAT_bundle_m2_hull.LoadAsset<GameObject>("M2 Hull ERA Array.prefab");
                 BRAT_m2_hull_array.transform.localScale = new Vector3(1f, 1f, 1f);
-
-                BRAT_m2_turret_array = BRAT_bundle_m2_turret.LoadAsset<GameObject>("M2 Turret ERA Array.prefab");
-                BRAT_m2_turret_array.transform.localScale = new Vector3(1f, 1f, 1f);
-
                 BRAT_m2_hull_array.hideFlags = HideFlags.DontUnloadUnusedAsset;
-                BRAT_m2_turret_array.hideFlags = HideFlags.DontUnloadUnusedAsset;
-
                 ERA_Setup(BRAT_m2_hull_array.GetComponentsInChildren<Transform>());
-                ERA_Setup(BRAT_m2_turret_array.GetComponentsInChildren<Transform>());
+
+                /*BRAT_m2_turret_array = BRAT_bundle_m2_turret.LoadAsset<GameObject>("M2 Turret ERA Array.prefab");
+                BRAT_m2_turret_array.transform.localScale = new Vector3(1f, 1f, 1f);
+                BRAT_m2_turret_array.hideFlags = HideFlags.DontUnloadUnusedAsset;
+                ERA_Setup(BRAT_m2_turret_array.GetComponentsInChildren<Transform>());*/
             }
         }
     }
@@ -125,7 +158,7 @@ namespace NatoEra
     [HarmonyPatch(typeof(GHPC.Weapons.LiveRound), "penCheck")]
     public class InsensitiveBRAT
     {
-        private static float pen_threshold = 30f;
+        private static float pen_threshold = 70f;
         private static float caliber_threshold = 20f;
 
         static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
