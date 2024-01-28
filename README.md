@@ -18,7 +18,7 @@ Special thanks to thebeninator for the coding and 3d modelling advice for this m
 ## NOTE!:
 <p>
 	<ul>
-	<li>The BRAT currently has an issue where it does not detonate as intended when hit even with a powerful round such as the 3BM32.</li>
+	<li>The BRAT currently has an issue where it does not detonate as intended sometimes when hit even with a powerful round such as the 3BM32</li>
  	</ul>
 </p>
 
@@ -31,18 +31,16 @@ Special thanks to thebeninator for the coding and 3d modelling advice for this m
 ## Installation:
 1.) Install [MelonLoader](https://github.com/LavaGang/MelonLoader/).
 
-2.) Download NatoERA.dll or 1NatoERA.dll and NatoEraAssets.tar or .zip from the [release page](https://github.com/Cyances/NATO-ERA/releases).
+2.) Download NATO ERA v#.#.tar or .zip from the [release page](https://github.com/Cyances/NATO-ERA/releases).
 
-3.) If you downloaded NatoERA.dll, rename it to <b>!NatoERA.dll</b> (note the exclamation mark at the start). This is important for mod compatibility.
-
-4.) Place the files in the manner below:
+3.) Place the files in the manner below:
 
 ![Mods Folder](https://github.com/Cyances/NATO-ERA/blob/main/Images/Mods%20Folder.PNG)
 ![NatoAssetsEra Folder](https://github.com/Cyances/NATO-ERA/blob/main/Images/NatoEraAssets%20Folder.PNG)
 
-5.) Launch the game.
+4.) Launch the game.
    
-6.) On first time running this mod, the entries in MelonPreferences.cfg will only appear after launching the game then closing it.
+5.) On first time running this mod, the entries in MelonPreferences.cfg will only appear after launching the game then closing it.
 
 ## ERA Performance:
 | Type  | Protection vs KE (mm) | Protection vs CE (mm) | Note
