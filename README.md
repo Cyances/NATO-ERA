@@ -22,8 +22,8 @@
 | ------------- | ------------- | ------------- | ------------- | 
 | BRAT-M3(M) | 30  | 450  | Front hull and extra arrays |
 | BRAT-M5(M) | 45  | 600  | Side hull |
-| Improved BRAT-M3(M) | 30  | 450  | Can be toggled separately |
-| Improved BRAT-M5(M) | 45  | 600  | Can be toggled separately |
+| Improved BRAT-M3(M) | 150  | 600  | Can be toggled separately |
+| Improved BRAT-M5(M) | 200  | 800  | Can be toggled separately |
 
 
 ## Mod Configuration (in UserData/MelonPreferences.cfg):
