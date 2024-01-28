@@ -33,7 +33,7 @@ Special thanks to thebeninator for the coding and 3d modelling advice for this m
 
 2.) Download NATO ERA v#.#.tar or .zip from the [release page](https://github.com/Cyances/NATO-ERA/releases).
 
-3.) Place the files in the manner below:
+3.) Extract the the files and place them in the manner below:
 
 ![Mods Folder](https://github.com/Cyances/NATO-ERA/blob/main/Images/Mods%20Folder.PNG)
 ![NatoAssetsEra Folder](https://github.com/Cyances/NATO-ERA/blob/main/Images/NatoEraAssets%20Folder%20v2.PNG)
