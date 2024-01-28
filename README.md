@@ -36,7 +36,7 @@ Special thanks to thebeninator for the coding and 3d modelling advice for this m
 3.) Place the files in the manner below:
 
 ![Mods Folder](https://github.com/Cyances/NATO-ERA/blob/main/Images/Mods%20Folder.PNG)
-![NatoAssetsEra Folder](https://github.com/Cyances/NATO-ERA/blob/main/Images/NatoEraAssets%20Folder.PNG)
+![NatoAssetsEra Folder](https://github.com/Cyances/NATO-ERA/blob/main/Images/NatoEraAssets%20Folder%20v2.PNG)
 
 4.) Launch the game.
    
