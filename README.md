@@ -1,4 +1,4 @@
-# NATO ERA v1.1 (Initial Release)
+# NATO ERA v1.1
 
 Special thanks to thebeninator for the coding and 3d modelling advice for this mod.
 
@@ -89,4 +89,4 @@ Special thanks to thebeninator for the coding and 3d modelling advice for this m
 
 The ERA arrangment for the units can be changed when (re)loading missions without restarting the game. Simply alt tab to edit the .cfg file, save the file then restart the mission or start a new one. However, to see updated ARAT performance or color, the game needs to be restarted.
 
-![Configuration File](https://github.com/Cyances/NATO-ERA/blob/main/Images/NATO%20ERA%20MelonPreferences.PNG)
+![Configuration File](https://github.com/Cyances/NATO-ERA/blob/main/Images/NATO%20ERA%20MelonPreferences%20v2.PNG)
