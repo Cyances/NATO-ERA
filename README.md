@@ -17,7 +17,7 @@ Special thanks to thebeninator for the coding and 3d modelling advice for this m
 
 
 ![ARAT-1 Standard Array](https://github.com/Cyances/NATO-ERA/blob/main/Images/Standard%20ARAT-1.png)
-![BRAT Standard](https://github.com/Cyances/NATO-ERA/blob/main/Images/Standard%20BRAT.pn)
+![BRAT Standard](https://github.com/Cyances/NATO-ERA/blob/main/Images/Standard%20BRAT.png)
 ![Flork Spec](https://github.com/Cyances/NATO-ERA/blob/main/Images/Flork%20Spec.png)
 ![Indigo ARAT](https://github.com/Cyances/NATO-ERA/blob/main/Images/Indigo%20ARAT-1.png)
 
