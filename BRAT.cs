@@ -61,7 +61,7 @@ namespace NatoEra
                 UniformArmor armor = transform.gameObject.GetComponent<UniformArmor>();
                 armor.SetName("BRAT-M5");
                 armor.PrimaryHeatRha = betterBRAT_CEP.Value ? 800f : 600f;
-                armor.PrimarySabotRha = betterBRAT_KEP.Value ? 200f : 40f;
+                armor.PrimarySabotRha = betterBRAT_KEP.Value ? 200f : 45f;
                 armor.SecondaryHeatRha = 0f;
                 armor.SecondarySabotRha = 0f;
                 armor._canShatterLongRods = true;
@@ -96,7 +96,7 @@ namespace NatoEra
                 UniformArmor armor = transform.gameObject.GetComponent<UniformArmor>();
                 armor.SetName("BRAT-M3");
                 armor.PrimaryHeatRha = betterBRAT_CEP.Value ? 600f : 450f;
-                armor.PrimarySabotRha = betterBRAT_KEP.Value ? 150f : 20f;
+                armor.PrimarySabotRha = betterBRAT_KEP.Value ? 150f : 30f;
                 armor.SecondaryHeatRha = 0f;
                 armor.SecondarySabotRha = 0f;
                 armor._canShatterLongRods = true;
