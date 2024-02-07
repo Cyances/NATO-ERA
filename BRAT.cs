@@ -33,6 +33,12 @@ namespace NatoEra
         static MelonPreferences_Entry<float> brat_R;
         static MelonPreferences_Entry<float> brat_G;
         static MelonPreferences_Entry<float> brat_B;
+
+        public static ArmorCodexScriptable armor_codex_bratm3 = null;
+        public static ArmorType armor_bratm3 = new ArmorType();
+
+        public static ArmorCodexScriptable armor_codex_bratm5 = null;
+        public static ArmorType armor_bratm5 = new ArmorType();
         public static void Config(MelonPreferences_Category cfg)
         {
             betterBRATm3_CEP = cfg.CreateEntry<bool>("Improve BRAT-M3 CE Protection (600mm)", false);
@@ -61,6 +67,7 @@ namespace NatoEra
             {
                 if (!transform.gameObject.name.Contains("BRAT-M5")) continue;
 
+                transform.gameObject.AddComponent<BoxCollider>();
                 transform.gameObject.AddComponent<UniformArmor>();
                 UniformArmor armor = transform.gameObject.GetComponent<UniformArmor>();
                 armor.SetName("BRAT-M5");
@@ -71,6 +78,24 @@ namespace NatoEra
                 armor._canShatterLongRods = true;
                 armor._crushThicknessModifier = 1f;
                 armor._isEra = true;
+
+                if (armor_codex_bratm5 == null)
+                {
+                    armor_codex_bratm5 = ScriptableObject.CreateInstance<ArmorCodexScriptable>();
+                    armor_codex_bratm5.name = "BRAT-M5 Armor Codex";
+                    armor_bratm5.RhaeMultiplierKe = 1f;
+                    armor_bratm5.RhaeMultiplierCe = 1f;
+                    armor_bratm5.CanRicochet = false;
+                    armor_bratm5.CrushThicknessModifier = 1f;
+                    armor_bratm5.NormalizesHits = true;
+                    armor_bratm5.CanShatterLongRods = false;
+                    armor_bratm5.ThicknessSource = ArmorType.RhaSource.Multipliers;
+                    armor_bratm5.Name = "BRAT-M5 Armor";
+
+                    armor_codex_bratm5.ArmorType = armor_bratm5;
+                }
+
+                armor._armorType = armor_codex_bratm5;
 
                 foreach (GameObject s in Resources.FindObjectsOfTypeAll<GameObject>())
                 {
@@ -96,6 +121,7 @@ namespace NatoEra
             {
                 if (!transform.gameObject.name.Contains("BRAT-M3")) continue;
 
+                transform.gameObject.AddComponent<BoxCollider>();
                 transform.gameObject.AddComponent<UniformArmor>();
                 UniformArmor armor = transform.gameObject.GetComponent<UniformArmor>();
                 armor.SetName("BRAT-M3");
@@ -106,6 +132,24 @@ namespace NatoEra
                 armor._canShatterLongRods = true;
                 armor._crushThicknessModifier = 1f;
                 armor._isEra = true;
+
+                if (armor_codex_bratm3 == null)
+                {
+                    armor_codex_bratm3 = ScriptableObject.CreateInstance<ArmorCodexScriptable>();
+                    armor_codex_bratm3.name = "BRAT-M3 Armor Codex";
+                    armor_bratm3.RhaeMultiplierKe = 1f;
+                    armor_bratm3.RhaeMultiplierCe = 1f;
+                    armor_bratm3.CanRicochet = false;
+                    armor_bratm3.CrushThicknessModifier = 1f;
+                    armor_bratm3.NormalizesHits = true;
+                    armor_bratm3.CanShatterLongRods = false;
+                    armor_bratm3.ThicknessSource = ArmorType.RhaSource.Multipliers;
+                    armor_bratm3.Name = "BRAT-M3 Armor";
+
+                    armor_codex_bratm3.ArmorType = armor_bratm3;
+                }
+
+                armor._armorType = armor_codex_bratm3;
 
                 foreach (GameObject s in Resources.FindObjectsOfTypeAll<GameObject>())
                 {
