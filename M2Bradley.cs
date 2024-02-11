@@ -56,13 +56,14 @@ namespace NatoEra
                     //if (BRAT.BRAT_m2_turret_array == null) continue;
                     if (!armor_go.GetComponent<LateFollow>()) continue;
 
-                    string name = armor_go.GetComponent<LateFollow>().ParentUnit.FriendlyName;
+                    //string name = armor_go.GetComponent<LateFollow>().ParentUnit.FriendlyName;
+                    string name = armor_go.GetComponent<LateFollow>().ParentUnit.UniqueName;
 
-                    if (name == "M2 Bradley") continue;
+                    if (name != "M2BRADLEY") continue;
 
                     if (armor_go.name == "HULL")
                     {
-                        if (armor_go.transform.Find("Hull Front Alu 5083/M2 Hull Alignment(Clone)")) continue;
+                        if (armor_go.transform.Find("Hull Front Alu 5083/M2 Hull ERA Array(Clone)")) continue;
                         GameObject m2_hull_array = GameObject.Instantiate(BRAT.BRAT_m2_hull_array, armor_go.transform.Find("Hull Front Alu 5083"));
                         m2_hull_array.transform.localEulerAngles = new Vector3(90f, 0f, 0f);
                         m2_hull_array.transform.localPosition = new Vector3(0f, 0f, 0f);
