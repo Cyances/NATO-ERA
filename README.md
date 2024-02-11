@@ -12,7 +12,6 @@ Special thanks to thebeninator for the coding and 3d modelling advice for this m
 	<li>Compatible with vanilla Abrams, M1A1 Abrams v1.0.9, M1A1 Abrams AMP v2.2, 50mm Bradley, M3A3 Bradley and M6A2 ADATS mods</li>
 	<li>Only the ARAT-1, BRAT M3 and M5 bricks are modelled, not the custom skirts or anything else to minimize potential performance hit</li>
 	<li>Triangular pieces such as the M4 brick is not modelled since triangles are not native to Unity Editor</li>
-	<li>Triangular pieces such as the M4 brick is not modelled since triangles are not native to Unity Editor</li>
  	</ul>
 </p>
 
