@@ -207,7 +207,7 @@ namespace NatoEra
     public class InsensitiveBRAT
     {
         private static float pen_threshold = 60f;
-        private static float caliber_threshold = 20f;
+        private static float caliber_threshold = 30f;
 
         static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
         {

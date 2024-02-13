@@ -56,7 +56,6 @@ namespace NatoEra
                     //if (BRAT.BRAT_m2_turret_array == null) continue;
                     if (!armor_go.GetComponent<LateFollow>()) continue;
 
-                    //string name = armor_go.GetComponent<LateFollow>().ParentUnit.FriendlyName;
                     string name = armor_go.GetComponent<LateFollow>().ParentUnit.UniqueName;
 
                     if (name != "M2BRADLEY") continue;

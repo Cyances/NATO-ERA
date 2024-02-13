@@ -119,12 +119,12 @@ namespace NatoEra
 
                     if (armor_go.name == "HULLARMOR")
                     {
-                        if (armor_go.transform.Find("Hull ERA Array(Clone)")) continue;
+                        if (armor_go.transform.Find("Hull ERA Array_Doc(Clone)")) continue;
                         GameObject m1iphull_array = GameObject.Instantiate(ARAT.ARAT1_m11ip_hull_array, armor_go.transform);
                         m1iphull_array.transform.localEulerAngles = new Vector3(0f, 270f, 0f);
                         m1iphull_array.transform.localPosition = new Vector3(0f, 0.9817f, -0.69f);
 
-                        if (!showERAm1ip_HullExtended.Value)
+                        /*if (!showERAm1ip_HullExtended.Value)
                         {
                             GameObject.Destroy(m1iphull_array.transform.Find("Plus Array").gameObject);
                         }
@@ -137,7 +137,7 @@ namespace NatoEra
                         if (!showERAm1ip_HullUpperFront.Value)
                         {
                             GameObject.Destroy(m1iphull_array.transform.Find("Upper Front Array").gameObject);
-                        }
+                        }*/
                     }
                 }
             }
@@ -161,7 +161,8 @@ namespace NatoEra
                     {
                         if (armor_go.name == "M1A0_turret_armour")
                         {
-                            if (armor_go.transform.Find("Turret ERA Array(Clone)")) continue;
+                            //if (armor_go.transform.Find("Turret ERA Array(Clone)")) continue;
+                            if (armor_go.transform.Find("Turret ERA Array_Doc(Clone)")) continue;
                             GameObject m1turret_array = GameObject.Instantiate(ARAT.ARAT1_m1_turret_array, armor_go.transform);
                             m1turret_array.transform.localEulerAngles = new Vector3(0f, 270f, 0f);
                             m1turret_array.transform.localPosition = new Vector3(0f, 0.9817f, -0.69f);
@@ -185,7 +186,7 @@ namespace NatoEra
 
                     if (armor_go.name == "HULLARMOR")
                     {
-                        if (armor_go.transform.Find("Hull ERA Array(Clone)")) continue;
+                        if (armor_go.transform.Find("Hull ERA Array_Doc(Clone)")) continue;
                         GameObject m1hull_array = GameObject.Instantiate(ARAT.ARAT1_m11ip_hull_array, armor_go.transform);
                         m1hull_array.transform.localEulerAngles = new Vector3(0f, 270f, 0f);
                         m1hull_array.transform.localPosition = new Vector3(0f, 0.9817f, -0.69f);

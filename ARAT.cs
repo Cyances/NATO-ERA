@@ -112,6 +112,45 @@ namespace NatoEra
 
                 transform.gameObject.AddComponent<HeatSource>();
             }
+
+            /*foreach (Transform transform in era_transforms)
+            {
+                if (!transform.gameObject.name.Contains("ARAT Side Skirt")) continue;
+
+                transform.gameObject.AddComponent<BoxCollider>();
+
+                transform.gameObject.AddComponent<UniformArmor>();
+                UniformArmor armor = transform.gameObject.GetComponent<UniformArmor>();
+                armor.SetName("ARAT Side Skirt");
+                armor.PrimaryHeatRha = 12.7f;
+                armor.PrimarySabotRha = 12.7f;
+                armor.SecondaryHeatRha = 0f;
+                armor.SecondarySabotRha = 0f;
+                armor._canShatterLongRods = true;
+                armor._crushThicknessModifier = 1f;
+                armor._isEra = true;
+
+                armor._armorType = armor_codex_arat1;
+
+                foreach (GameObject s in Resources.FindObjectsOfTypeAll<GameObject>())
+                {
+                    if (s.name == "Autocannon HE Armor Impact") { armor.DetonateEffect = s; break; }
+                }
+
+                armor.UndetonatedObjects = new GameObject[] { armor.gameObject };
+
+                MeshRenderer mesh_renderer = transform.gameObject.GetComponent<MeshRenderer>();
+                mesh_renderer.material = new Material(Shader.Find("Standard (FLIR)"));
+                mesh_renderer.material.mainTexture = concrete_tex;
+                mesh_renderer.material.mainTextureScale = new Vector2(0.07f, 0.07f);
+                mesh_renderer.material.mainTextureOffset = new Vector2(0f, 0f);
+                mesh_renderer.material.EnableKeyword("_NORMALMAP");
+                mesh_renderer.material.SetTexture("_BumpMap", concrete_tex_normal);
+
+                mesh_renderer.material.color = colours[UnityEngine.Random.Range(0, colours.Length)];
+
+                transform.gameObject.AddComponent<HeatSource>();
+            }*/
         }
 
         public static void Init()
@@ -119,7 +158,8 @@ namespace NatoEra
 
             if (ARAT1_m1_turret_array == null)
             {
-                var ARAT1_bundle_m11ip_hull = AssetBundle.LoadFromFile(Path.Combine(MelonEnvironment.ModsDirectory + "/NatoEraAssets", "abrams_hull_arat"));
+                //var ARAT1_bundle_m11ip_hull = AssetBundle.LoadFromFile(Path.Combine(MelonEnvironment.ModsDirectory + "/NatoEraAssets", "abrams_hull_arat"));
+                var ARAT1_bundle_m11ip_hull = AssetBundle.LoadFromFile(Path.Combine(MelonEnvironment.ModsDirectory + "/NatoEraAssets", "abrams_hull_arat_doc"));
                 var ARAT1_bundle_m1_turret = AssetBundle.LoadFromFile(Path.Combine(MelonEnvironment.ModsDirectory + "/NatoEraAssets", "abrams_m1_turret_arat"));
                 var ARAT1_bundle_m1ip_turret = AssetBundle.LoadFromFile(Path.Combine(MelonEnvironment.ModsDirectory + "/NatoEraAssets", "abrams_m1ip_turret_arat"));
 
@@ -133,7 +173,7 @@ namespace NatoEra
                     if (t.name == "GHPC_ConcretePanels_Normal") { concrete_tex_normal = t; break; }
                 }
 
-                ARAT1_m11ip_hull_array = ARAT1_bundle_m11ip_hull.LoadAsset<GameObject>("Hull ERA Array.prefab");
+                ARAT1_m11ip_hull_array = ARAT1_bundle_m11ip_hull.LoadAsset<GameObject>("Hull ERA Array_Doc.prefab");
                 ARAT1_m11ip_hull_array.transform.localScale = new Vector3(1f, 1f, 1f);
 
                 ARAT1_m1_turret_array = ARAT1_bundle_m1_turret.LoadAsset<GameObject>("Turret ERA Array.prefab");
@@ -156,7 +196,7 @@ namespace NatoEra
     [HarmonyPatch(typeof(GHPC.Weapons.LiveRound), "penCheck")]
     public class InsensitiveARAT
     {
-        private static float pen_threshold = 10f;
+        private static float pen_threshold = 30f;
         private static float caliber_threshold = 20f;
 
         static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
