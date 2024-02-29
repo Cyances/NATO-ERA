@@ -19,7 +19,7 @@ Special thanks to thebeninator for the coding and 3d modelling advice for this m
 <p>
 	<ul>
 	<li>If you want to apply your own textures to the ERA, you may approach me for the required model files</li>
-	<li>If you are also using the M3A3 mod, use 1NatoERA_M3.dll instead for compatibility. If you are using other/no Bradley mods, use the non-M3.dll</li>
+	<li>If you are also using the M3A3 mod, use 1NatoERA_M3.dll instead for compatibility. If you are using other/no Bradley mods, use the non-M3.dll. Make sure only one version of the .dll is located inside the mods folder.</li>
  	</ul>
 </p>
 
