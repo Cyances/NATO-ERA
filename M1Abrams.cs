@@ -87,7 +87,7 @@ namespace NatoEra
                     if (armor_go.name != "Turret_Armor" && armor_go.name != "HULLARMOR") continue;
                     if (!armor_go.transform.parent.GetComponent<LateFollow>()) continue;
 
-                    string name = armor_go.transform.parent.GetComponent<LateFollow>().ParentUnit.FriendlyName;
+                    string name = armor_go.transform.parent.GetComponent<LateFollow>().ParentUnit.UniqueName;
 
                     if (name != "M1IP") continue;
 
@@ -152,7 +152,7 @@ namespace NatoEra
                     if (armor_go.name != "M1A0_turret_armour" && armor_go.name != "HULLARMOR") continue;
                     if (!armor_go.transform.parent.GetComponent<LateFollow>()) continue;
 
-                    string name = armor_go.transform.parent.GetComponent<LateFollow>().ParentUnit.FriendlyName;
+                    string name = armor_go.transform.parent.GetComponent<LateFollow>().ParentUnit.UniqueName;
 
                     if (name != "M1") continue;
 

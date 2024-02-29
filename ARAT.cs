@@ -33,6 +33,9 @@ namespace NatoEra
         static MelonPreferences_Entry<float> arat_R;
         static MelonPreferences_Entry<float> arat_G;
         static MelonPreferences_Entry<float> arat_B;
+
+        public static ArmorCodexScriptable armor_codex_arat1 = null;
+        public static ArmorType armor_arat1 = new ArmorType();
         public static void Config(MelonPreferences_Category cfg)
         {
             betterARAT_CEP = cfg.CreateEntry<bool>("Improve CE Protection (600mm)", false);
@@ -59,6 +62,8 @@ namespace NatoEra
             {
                 if (!transform.gameObject.name.Contains("ARAT-1")) continue;
 
+                transform.gameObject.AddComponent<BoxCollider>();
+
                 transform.gameObject.AddComponent<UniformArmor>();
                 UniformArmor armor = transform.gameObject.GetComponent<UniformArmor>();
                 armor.SetName("ARAT-1");
@@ -69,6 +74,24 @@ namespace NatoEra
                 armor._canShatterLongRods = true;
                 armor._crushThicknessModifier = 1f;
                 armor._isEra = true;
+
+                if (armor_codex_arat1 == null)
+                {
+                    armor_codex_arat1 = ScriptableObject.CreateInstance<ArmorCodexScriptable>();
+                    armor_codex_arat1.name = "ARAT-1 Armor Codex";
+                    armor_arat1.RhaeMultiplierKe = 1f;
+                    armor_arat1.RhaeMultiplierCe = 1f;
+                    armor_arat1.CanRicochet = false;
+                    armor_arat1.CrushThicknessModifier = 1f;
+                    armor_arat1.NormalizesHits = true;
+                    armor_arat1.CanShatterLongRods = false;
+                    armor_arat1.ThicknessSource = ArmorType.RhaSource.Multipliers;
+                    armor_arat1.Name = "ARAT-1 Armor";
+
+                    armor_codex_arat1.ArmorType = armor_arat1;
+                }
+
+                armor._armorType = armor_codex_arat1;
 
                 foreach (GameObject s in Resources.FindObjectsOfTypeAll<GameObject>())
                 {
