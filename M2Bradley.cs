@@ -59,7 +59,7 @@ namespace NatoEra
                     //string name = armor_go.GetComponent<LateFollow>().ParentUnit.FriendlyName;
                     string name = armor_go.GetComponent<LateFollow>().ParentUnit.UniqueName;
 
-                    if (name != "M2BRADLEY") continue;
+                    if (name != "M3A3 (DS) Bradley") continue;
 
                     if (armor_go.name == "HULL")
                     {
