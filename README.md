@@ -12,7 +12,14 @@
 	<li>Only the BRAT M3 and M5 bricks are modelled, not the custom skirts or anything else to minimize potential performance hit</li>
 	<li>Triangular pieces such as the M4 brick is not modelled since triangles are not native to Unity Editor</li>
 	<li>Allows anti-ERA penetrator configuration (for modders)</li>
-	<li>Compatible with 50mm Bradley, M3A3 Bradley and M6A2 ADATS mods, but not vanilla Bradley</li>
+	<li>Compatible with vanilla Bradley, 50mm Bradley, M3A3 Bradley* and M6A2 ADATS mods</li>
+ 	</ul>
+</p>
+
+## NOTE!
+<p>
+	<ul>
+	<li>If you are also using the M3A3 mod, use 1NatoERA_M3.dll instead for compatibility. If you are using other/no Bradley mods, use the non-M3.dll</li>
  	</ul>
 </p>
 
