@@ -11,12 +11,12 @@ using UnityEngine;
 using GHPC.Camera;
 using GHPC.Player;
 
-[assembly: MelonInfo(typeof(AbramsAMPMod), "1 NATO ERA", "1.1.4", "Cyance")]
+[assembly: MelonInfo(typeof(NatoERA), "1 NATO ERA", "1.1.4", "Cyance")]
 [assembly: MelonGame("Radian Simulations LLC", "GHPC")]
 
 namespace NatoEra
 {
-    public class AbramsAMPMod : MelonMod
+    public class NatoERA : MelonMod
     {
 
         public static GameObject[] vic_gos;
