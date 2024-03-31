@@ -6,13 +6,10 @@
 	<li>Fixed issue with the mod not working if the new Main Menu scene is unlocked</li>
 	<li>Compatibility fix with M3A2 v1.1.3 mod</li>
 	<li>Toggleable option for ERA weight penalty</li>
-	<li>ARAT-1 weight is [29.48 KG](https://www.army.mil/article/237406/18th_mp_brigade_installs_arat_tiles) per tile</li>
+	<li>ARAT-1 weight is 29.48 KG per tile but total value is rounded to the nearest Ones</li>
 	<li>I could not find the weight for BRAT so it is assumed to be the same as ARAT</li>
-	<li>[GitHub Pages](https://pages.github.com/)</li>
  	</ul>
 </p>
-
-[GitHub Pages](https://pages.github.com/)
 
 | Option  | Default config | Added Weight (KG) | Note |
 | ------------- | ------------- | ------------- |  ------------- | 
