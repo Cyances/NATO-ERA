@@ -6,9 +6,9 @@ Special thanks to thebeninator for the coding and 3d modelling advice for this m
 <p>
 	<ul>
 	<li>Adds configurable ERA to M1/IP Abrams and M2 Bradley</li>
-	<li>Configurable ERA arrangement</li>
-	<li>Configurable ERA performance</li>
+	<li>Configurable ERA arrangement and performance</li>
 	<li>Configurable ERA color (so you can match it to the custom skins you have)</li>
+	<li>Optional ERA weight penalty</li>
 	<li>Compatible with vanilla Abrams, M1A1 Abrams v1.1.4, M1A1 Abrams AMP v2.3.3, 50mm Bradley, M3A3 Bradley* and M6A2 ADATS mods</li>
 	<li>Only the ARAT-1, BRAT M3 and M5 bricks are modelled, not the custom skirts or anything else to minimize potential performance hit</li>
 	<li>Triangular pieces such as the M4 brick is not modelled since triangles are not native to Unity Editor</li>
@@ -88,7 +88,6 @@ Special thanks to thebeninator for the coding and 3d modelling advice for this m
 | M2 Extended Side Lower  ERA | false | 118 |  |  |
 | M2 Hull Lower Front ERA | false | 251 |  |  |
 | M2 Hull Upper ERA | false | 671 |  |  |
-| - | - | - | - |
 | - | - | - | - |
 | Feather BRAT | true |  | Removes weight penalty |
 | - | - | - | - |
