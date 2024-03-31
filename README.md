@@ -4,8 +4,10 @@
 <p>
 	<ul>
 	<li>Fixed issue with the mod not working if the new Main Menu scene is unlocked</li>
-	<li>Toggleable option for ERA weight penalty</li>
 	<li>Compatibility fix with M3A2 v1.1.3 mod</li>
+	<li>Toggleable option for ERA weight penalty</li>
+	<li>ARAT-1 weight is [29.48 KG](https://www.army.mil/article/237406/18th_mp_brigade_installs_arat_tiles) per tile</li>
+	<li>I could not find the weight for BRAT so it is assumed to be the same as ARAT</li>
  	</ul>
 </p>
 
@@ -39,5 +41,3 @@
 | M2 Hull Upper ERA | false | 671 |  |
 | - | - | - | - |
 | Feather BRAT | true |  | Removes weight penalty |
-
-![Configuration File](https://github.com/Cyances/NATO-ERA/blob/main/Images/NATO%20ERA%20MelonPreferences.PNG)
