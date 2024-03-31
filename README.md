@@ -1,4 +1,4 @@
-# NATO ERA v1.2 WIP
+# NATO ERA v1.2 Remodel Test
 
 ## Features:
 <p>
