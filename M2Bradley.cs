@@ -46,7 +46,8 @@ namespace NatoEra
             showERAm2_HullLowerFront = cfg.CreateEntry<bool>("M2 Hull Lower Front ERA", false);
             showERAm2_HullUpper = cfg.CreateEntry<bool>("M2 Hull Upper ERA", false);
 
-            featherBRAT = cfg.CreateEntry<bool>("Weightless BRAT", false);
+            featherBRAT = cfg.CreateEntry<bool>("Feather BRAT", true);
+            featherBRAT.Description = "Removes BRAT weight penalty";
         }
 
         public static IEnumerator Convert(GameState _)

@@ -75,7 +75,8 @@ namespace NatoEra
             showERAm1ip_TurretCheek = cfg.CreateEntry<bool>("M1IP Turret Cheek ERA", false);
             showERAm1ip_TurretExtended = cfg.CreateEntry<bool>("M1IP Extended Turret ERA", false);
 
-            featherARAT = cfg.CreateEntry<bool>("Weightless ARAT", false);
+            featherARAT = cfg.CreateEntry<bool>("Feather ARAT", true);
+            featherARAT.Description = "Removes ARAT weight penalty";
         }
 
         public static IEnumerator Convert(GameState _)
