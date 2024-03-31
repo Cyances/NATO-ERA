@@ -9,7 +9,7 @@ Special thanks to thebeninator for the coding and 3d modelling advice for this m
 	<li>Configurable ERA arrangement and performance</li>
 	<li>Configurable ERA color (so you can match it to the custom skins you have)</li>
 	<li>Optional ERA weight penalty</li>
-	<li>Compatible with vanilla Abrams, M1A1 Abrams v1.1.4, M1A1 Abrams AMP v2.3.3, 50mm Bradley, M3A3 Bradley* and M6A2 ADATS mods</li>
+	<li>Compatible with vanilla Abrams, M1A1 Abrams v1.1.4, M1A1 Abrams AMP v2.3.3, 50mm Bradley, M3A2 Bradley* and M6A2 ADATS mods</li>
 	<li>Only the ARAT-1, BRAT M3 and M5 bricks are modelled, not the custom skirts or anything else to minimize potential performance hit</li>
 	<li>Triangular pieces such as the M4 brick is not modelled since triangles are not native to Unity Editor</li>
  	</ul>
@@ -19,7 +19,8 @@ Special thanks to thebeninator for the coding and 3d modelling advice for this m
 <p>
 	<ul>
 	<li>If you want to apply your own textures to the ERA, you may approach me for the required model files</li>
-	<li>If you are also using the M3A3 mod, use 1NatoERA_M3.dll instead for compatibility. If you are using other/no Bradley mods, use the non-M3.dll. Make sure only one version of the .dll is located inside the mods folder.</li>
+	<li>ARAT-1 weight is 29.48 KG per tile but total value is rounded to the nearest Ones</li>
+	<li>I could not find the weight for BRAT so it is assumed to be the same as ARAT</li>
  	</ul>
 </p>
 
