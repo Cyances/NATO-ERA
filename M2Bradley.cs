@@ -32,6 +32,8 @@ namespace NatoEra
         static MelonPreferences_Entry<bool> showERAm2_HullLowerFront;
         static MelonPreferences_Entry<bool> showERAm2_HullUpper;
 
+        static MelonPreferences_Entry<bool> featherBRAT;
+
         public static void Config(MelonPreferences_Category cfg)
         {
             showERAm2 = cfg.CreateEntry<bool>("M2 ERA", true);
@@ -43,6 +45,8 @@ namespace NatoEra
             showERAm2_HullSideLowerExtended = cfg.CreateEntry<bool>("M2 Extended Hull Side Lower ERA", false);
             showERAm2_HullLowerFront = cfg.CreateEntry<bool>("M2 Hull Lower Front ERA", false);
             showERAm2_HullUpper = cfg.CreateEntry<bool>("M2 Hull Upper ERA", false);
+
+            featherBRAT = cfg.CreateEntry<bool>("Weightless BRAT", false);
         }
 
         public static IEnumerator Convert(GameState _)
@@ -107,6 +111,55 @@ namespace NatoEra
                         turret_array.transform.localEulerAngles = new Vector3(90f, 0f, 0f);
                         turret_array.transform.localPosition = new Vector3(0f, 0f, -1.45f);
                     }*/
+                }
+
+                foreach (GameObject vic_go in NatoERA.vic_gos)
+                {
+                    Vehicle vic = vic_go.GetComponent<Vehicle>();
+
+                    if (vic == null) continue;
+
+                    if (vic_go.GetComponent<Util.AlreadyConverted>() != null) continue;
+                    if (vic.FriendlyName == "M2 Bradley")
+                    {
+                        vic_go.AddComponent<Util.AlreadyConverted>();
+
+                        Rigidbody m2Rb = vic_go.GetComponent<Rigidbody>();
+
+                        int mass_m2_Hull = featherBRAT.Value ? 0 : 2211;
+                        int mass_m2_HullSideLower = featherBRAT.Value ? 0 : 825;
+                        int mass_m2_HullSideLowerExtended = featherBRAT.Value ? 0 : 118;
+                        int mass_m2_HullSideExtended = featherBRAT.Value ? 0 : 531;
+                        int mass_m2_FrontLower = featherBRAT.Value ? 0 : 251;
+                        int mass_m2_HullUpper = featherBRAT.Value ? 0 : 671;
+
+                        m2Rb.mass += mass_m2_Hull;
+
+                        if (showERAm2_HullSideExtended.Value)
+                        {
+                            m2Rb.mass += mass_m2_HullSideExtended;
+                        }
+
+                        if (showERAm2_HullSideLower.Value)
+                        {
+                            m2Rb.mass += mass_m2_HullSideLower;
+                        }
+
+                        if (showERAm2_HullSideLowerExtended.Value)
+                        {
+                            m2Rb.mass += mass_m2_HullSideLowerExtended;
+                        }
+
+                        if (showERAm2_HullLowerFront.Value)
+                        {
+                            m2Rb.mass += mass_m2_FrontLower;
+                        }
+
+                        if (showERAm2_HullUpper.Value)
+                        {
+                            m2Rb.mass += mass_m2_HullUpper;
+                        }
+                    }
                 }
             }
             yield break;
