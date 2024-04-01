@@ -286,51 +286,51 @@ namespace NatoEra
 
                         Rigidbody m1Rb = vic_go.GetComponent<Rigidbody>();
 
-                        int mass_m1ip_Hull = featherARAT.Value ? 0 : 1887;
-                        int mass_m1ip_HullExtended = featherARAT.Value ? 0 : 769;
-                        int mass_m1ip_HullLowerFront = featherARAT.Value ? 0 : 295;
-                        int mass_m1ip_HullUpperFront = featherARAT.Value ? 0 : 1150;
-                        int mass_m1ip_Turret = featherARAT.Value ? 0 : 737;
-                        int mass_m1ip_TurretExtended = featherARAT.Value ? 0 : 413;
-                        int mass_m1ip_TurretRoof = featherARAT.Value ? 0 : 501;
-                        int mass_m1ip_TurretCheek = featherARAT.Value ? 0 : 383;
+                        int mass_m1_Hull = featherARAT.Value ? 0 : 1887;
+                        int mass_m1_HullExtended = featherARAT.Value ? 0 : 769;
+                        int mass_m1_HullLowerFront = featherARAT.Value ? 0 : 295;
+                        int mass_m1_HullUpperFront = featherARAT.Value ? 0 : 1150;
+                        int mass_m1_Turret = featherARAT.Value ? 0 : 678;
+                        int mass_m1_TurretExtended = featherARAT.Value ? 0 : 413;
+                        int mass_m1_TurretRoof = featherARAT.Value ? 0 : 501;
+                        int mass_m1_TurretCheek = featherARAT.Value ? 0 : 383;
 
-                        m1Rb.mass += mass_m1ip_Hull;
+                        m1Rb.mass += mass_m1_Hull;
                         
 
                         if (showERAm1_HullExtended.Value)
                         {
-                            m1Rb.mass += mass_m1ip_HullExtended;
+                            m1Rb.mass += mass_m1_HullExtended;
                         }
 
                         if (showERAm1_HullLowerFront.Value)
                         {
-                            m1Rb.mass += mass_m1ip_HullLowerFront;
+                            m1Rb.mass += mass_m1_HullLowerFront;
                         }
 
                         if (showERAm1_HullUpperFront.Value)
                         {
-                            m1Rb.mass += mass_m1ip_HullUpperFront;
+                            m1Rb.mass += mass_m1_HullUpperFront;
                         }
 
                         if (showERAm1_Turret.Value)
                         {
-                            m1Rb.mass += mass_m1ip_Turret;
+                            m1Rb.mass += mass_m1_Turret;
                         }
 
                         if (showERAm1_TurretExtended.Value)
                         {
-                            m1Rb.mass += mass_m1ip_TurretExtended;
+                            m1Rb.mass += mass_m1_TurretExtended;
                         }
 
                         if (showERAm1_TurretRoof.Value)
                         {
-                            m1Rb.mass += mass_m1ip_TurretRoof;
+                            m1Rb.mass += mass_m1_TurretRoof;
                         }
 
                         if (showERAm1_TurretCheek.Value)
                         {
-                            m1Rb.mass += mass_m1ip_TurretCheek;
+                            m1Rb.mass += mass_m1_TurretCheek;
                         }
                     }
                 }
