@@ -34,7 +34,7 @@ namespace NatoEra
         static MelonPreferences_Entry<float> arat_G;
         static MelonPreferences_Entry<float> arat_B;
 
-        static MelonPreferences_Entry<bool> ipModel;
+        public static MelonPreferences_Entry<bool> ipModel;
 
         public static ArmorCodexScriptable armor_codex_arat1 = null;
         public static ArmorType armor_arat1 = new ArmorType();
