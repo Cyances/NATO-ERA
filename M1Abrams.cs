@@ -81,6 +81,25 @@ namespace NatoEra
 
         public static IEnumerator Convert(GameState _)
         {
+            //Mass values here
+            int mass_m1ip_Hull = featherARAT.Value ? 0 : 1887;
+            int mass_m1ip_HullExtended = featherARAT.Value ? 0 : 769;
+            int mass_m1ip_HullLowerFront = featherARAT.Value ? 0 : 295;
+            int mass_m1ip_HullUpperFront = featherARAT.Value ? 0 : 1150;
+            int mass_m1ip_Turret = featherARAT.Value ? 0 : 737;
+            int mass_m1ip_TurretExtended = featherARAT.Value ? 0 : 413;
+            int mass_m1ip_TurretRoof = featherARAT.Value ? 0 : 501;
+            int mass_m1ip_TurretCheek = featherARAT.Value ? 0 : 383;
+
+            int mass_m1_Hull = featherARAT.Value ? 0 : 1887;
+            int mass_m1_HullExtended = featherARAT.Value ? 0 : 769;
+            int mass_m1_HullLowerFront = featherARAT.Value ? 0 : 295;
+            int mass_m1_HullUpperFront = featherARAT.Value ? 0 : 1150;
+            int mass_m1_Turret = featherARAT.Value ? 0 : 678;
+            int mass_m1_TurretExtended = featherARAT.Value ? 0 : 413;
+            int mass_m1_TurretRoof = featherARAT.Value ? 0 : 501;
+            int mass_m1_TurretCheek = featherARAT.Value ? 0 : 383;
+
             ////Apply ARAT
             ////ERA to M1IP
             if (showERAm1ip.Value)
@@ -158,15 +177,6 @@ namespace NatoEra
                         vic_go.AddComponent<Util.AlreadyConverted>();
 
                         Rigidbody m1ipRb = vic_go.GetComponent<Rigidbody>();
-
-                        int mass_m1ip_Hull= featherARAT.Value ? 0 : 1887;
-                        int mass_m1ip_HullExtended = featherARAT.Value ? 0 : 769;
-                        int mass_m1ip_HullLowerFront = featherARAT.Value ? 0 : 295;
-                        int mass_m1ip_HullUpperFront = featherARAT.Value ? 0 : 1150;
-                        int mass_m1ip_Turret = featherARAT.Value ? 0 : 737;
-                        int mass_m1ip_TurretExtended = featherARAT.Value ? 0 : 413;
-                        int mass_m1ip_TurretRoof = featherARAT.Value ? 0 : 501;
-                        int mass_m1ip_TurretCheek = featherARAT.Value ? 0 : 383;
 
                         m1ipRb.mass += mass_m1ip_Hull;
 
@@ -286,15 +296,6 @@ namespace NatoEra
 
                         Rigidbody m1Rb = vic_go.GetComponent<Rigidbody>();
 
-                        int mass_m1_Hull = featherARAT.Value ? 0 : 1887;
-                        int mass_m1_HullExtended = featherARAT.Value ? 0 : 769;
-                        int mass_m1_HullLowerFront = featherARAT.Value ? 0 : 295;
-                        int mass_m1_HullUpperFront = featherARAT.Value ? 0 : 1150;
-                        int mass_m1_Turret = featherARAT.Value ? 0 : 678;
-                        int mass_m1_TurretExtended = featherARAT.Value ? 0 : 413;
-                        int mass_m1_TurretRoof = featherARAT.Value ? 0 : 501;
-                        int mass_m1_TurretCheek = featherARAT.Value ? 0 : 383;
-
                         m1Rb.mass += mass_m1_Hull;
                         
 
@@ -315,7 +316,7 @@ namespace NatoEra
 
                         if (showERAm1_Turret.Value)
                         {
-                            m1Rb.mass += mass_m1_Turret;
+                            m1Rb.mass += ARAT.ipModel.Value ? mass_m1ip_Turret  : mass_m1_Turret;
                         }
 
                         if (showERAm1_TurretExtended.Value)
