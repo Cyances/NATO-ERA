@@ -34,10 +34,15 @@ namespace NatoEra
         static MelonPreferences_Entry<float> arat_G;
         static MelonPreferences_Entry<float> arat_B;
 
+        static MelonPreferences_Entry<bool> ipModel;
+
         public static ArmorCodexScriptable armor_codex_arat1 = null;
         public static ArmorType armor_arat1 = new ArmorType();
         public static void Config(MelonPreferences_Category cfg)
         {
+            ipModel = cfg.CreateEntry<bool>("IP model to M1", false);
+            ipModel.Description = "Set to true if base M1 is using IP model (AMP mod)";
+
             betterARAT_CEP = cfg.CreateEntry<bool>("Improve CE Protection (600mm)", false);
             betterARAT_CEP.Description = "Improve ARAT Protection";
             betterARAT_KEP = cfg.CreateEntry<bool>("Improve KE Protection (150mm)", false);
@@ -136,7 +141,7 @@ namespace NatoEra
                 ARAT1_m11ip_hull_array = ARAT1_bundle_m11ip_hull.LoadAsset<GameObject>("Hull ERA Array.prefab");
                 ARAT1_m11ip_hull_array.transform.localScale = new Vector3(1f, 1f, 1f);
 
-                ARAT1_m1_turret_array = ARAT1_bundle_m1_turret.LoadAsset<GameObject>("Turret ERA Array.prefab");
+                ARAT1_m1_turret_array = ipModel.Value ? ARAT1_bundle_m1ip_turret.LoadAsset<GameObject>("Turret ERA Array M1IP.prefab") : ARAT1_bundle_m1_turret.LoadAsset<GameObject>("Turret ERA Array.prefab");
                 ARAT1_m1_turret_array.transform.localScale = new Vector3(1f, 1f, 1f);
 
                 ARAT1_m1ip_turret_array = ARAT1_bundle_m1ip_turret.LoadAsset<GameObject>("Turret ERA Array M1IP.prefab");
