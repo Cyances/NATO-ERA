@@ -1,4 +1,4 @@
-# NATO ERA v1.2
+# NATO ERA v1.2.1
 
 ## Features:
 <p>
@@ -13,18 +13,18 @@
 
 | Option  | Default config | Added Weight (KG) | Note |
 | ------------- | ------------- | ------------- |  ------------- | 
-| M1 ERA  | true | 1887 | Hull sides array. Also master option to show ERA or not regardless of config below. |
+| M1 ERA  | true | 1,887 | Hull sides array. Also master option to show ERA or not regardless of config below. |
 | M1 Hull Lower Front ERA  | false  | 295 |  |
-| M1 Hull Upper Front ERA  | false  | 1150 |  |
+| M1 Hull Upper Front ERA  | false  | 1,150 |  |
 | M1 Extended Hull ERA | false  | 769 |  |
 | M1 Turret ERA | false | 678 | Turret sides array. Also master option to show other turret ERA arrays or not regardless of config below. |
 | M1 Turret Roof ERA | false | 501 |  |
 | M1 Turret Cheek ERA | false | 383 |  |
 | M1 Extended Turret ERA | false | 413 |  |
 | - | - | - | - |
-| M1IP ERA  | true | 1887 | Hull sides array. Also master option to show ERA or not regardless of config below. |
+| M1IP ERA  | true | 1,887 | Hull sides array. Also master option to show ERA or not regardless of config below. |
 | M1IP Hull Lower Front ERA  | false  | 295 |  |
-| M1IP Hull Upper Front ERA  | false  | 1150 |  |
+| M1IP Hull Upper Front ERA  | false  | 1,150 |  |
 | M1IP Extended Hull ERA | false  | 769 |  |
 | M1IP Turret ERA | false | 737 | Turret sides array. Also master option to show other turret ERA arrays or not regardless of config below. |
 | M1IP Turret Roof ERA | false | 501 |  |
@@ -32,6 +32,7 @@
 | M1IP Extended Turret ERA | false | 413 |  |
 | - | - | - | - |
 | Feather ARAT | true |  | Removes weight penalty |
+| IP model to M1 | false |  | If base M1 is using IP model (AMP mod) |
 | - | - | - | - |
 | M2 ERA | true | 2,211 | Hull sides and front array. Master option to show ERA or not regardless of config below. |
 | M2 Extended Hull ERA | false | 531 |  |
