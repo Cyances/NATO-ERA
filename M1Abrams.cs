@@ -171,10 +171,12 @@ namespace NatoEra
 
                     if (vic == null) continue;
 
-                    if (vic_go.GetComponent<Util.AlreadyConverted>() != null) continue;
+                    if (vic_go.GetComponent<Util.AlreadyConvertedNERA>() != null) continue;
+                    if (vic_go.GetComponent<Util.HasARAT>() != null) continue;
                     if (vic.FriendlyName == "M1IP")
                     {
-                        vic_go.AddComponent<Util.AlreadyConverted>();
+                        vic_go.AddComponent<Util.AlreadyConvertedNERA>();
+                        vic_go.AddComponent<Util.HasARAT>();
 
                         Rigidbody m1ipRb = vic_go.GetComponent<Rigidbody>();
 
@@ -289,10 +291,12 @@ namespace NatoEra
 
                     if (vic == null) continue;
 
-                    if (vic_go.GetComponent<Util.AlreadyConverted>() != null) continue;
+                    if (vic_go.GetComponent<Util.AlreadyConvertedNERA>() != null) continue;
+                    if (vic_go.GetComponent<Util.HasARAT>() != null) continue;
                     if (vic.FriendlyName == "M1")
                     {
-                        vic_go.AddComponent<Util.AlreadyConverted>();
+                        vic_go.AddComponent<Util.AlreadyConvertedNERA>();
+                        vic_go.AddComponent<Util.HasARAT>();
 
                         Rigidbody m1Rb = vic_go.GetComponent<Rigidbody>();
 

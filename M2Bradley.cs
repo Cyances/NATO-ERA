@@ -120,10 +120,12 @@ namespace NatoEra
 
                     if (vic == null) continue;
 
-                    if (vic_go.GetComponent<Util.AlreadyConverted>() != null) continue;
+                    if (vic_go.GetComponent<Util.AlreadyConvertedNERA>() != null) continue;
+                    if (vic_go.GetComponent<Util.HasBRAT>() != null) continue;
                     if (vic.FriendlyName == "M2 Bradley")
                     {
-                        vic_go.AddComponent<Util.AlreadyConverted>();
+                        vic_go.AddComponent<Util.AlreadyConvertedNERA>();
+                        vic_go.AddComponent<Util.HasBRAT>();
 
                         Rigidbody m2Rb = vic_go.GetComponent<Rigidbody>();
 
