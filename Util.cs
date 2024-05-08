@@ -12,7 +12,9 @@ namespace NatoEra
 {
     public class Util
     {
-        public class AlreadyConverted : MonoBehaviour { }
+        public class AlreadyConvertedNERA : MonoBehaviour { }
+        public class HasARAT : MonoBehaviour { }
+        public class HasBRAT : MonoBehaviour { }
 
         // https://snipplr.com/view/75285/clone-from-one-object-to-another-using-reflection
         public static void ShallowCopy(System.Object dest, System.Object src)
