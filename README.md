@@ -1,4 +1,4 @@
-# NATO ERA v1.2.1
+# NATO ERA v1.2.2
 
 ## Features:
 <p>
@@ -8,6 +8,7 @@
 	<li>Toggleable option for ERA weight penalty</li>
 	<li>ARAT-1 weight is 29.48 KG per tile but total value is rounded to the nearest Ones</li>
 	<li>I could not find the weight for BRAT so it is assumed to be the same as ARAT</li>
+	<li>1.2.2: Added code for ARAT detection in AMP 2.6</li>
  	</ul>
 </p>
 
