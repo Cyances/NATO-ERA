@@ -55,23 +55,24 @@ namespace NatoEra
             ////Apply BRAT
             if (showERAm2.Value)
             {
-                foreach (GameObject armor_go in GameObject.FindGameObjectsWithTag("Penetrable"))
+                foreach (GameObject vic_go in NatoERA.vic_gos)
                 {
-                    if (BRAT.BRAT_m2_hull_array == null) continue;
-                    //if (BRAT.BRAT_m2_turret_array == null) continue;
-                    if (!armor_go.GetComponent<LateFollow>()) continue;
+                    Vehicle vic = vic_go.GetComponent<Vehicle>();
 
-                    string name = armor_go.GetComponent<LateFollow>().ParentUnit.UniqueName;
+                    if (vic == null) continue;
 
-                    if (name != "M2BRADLEY") continue;
-                    //if (name != "M3A3 (DS) Bradley") continue;//For M3 mod compatibility
-
-                    if (armor_go.name == "HULL")
+                    if (vic_go.GetComponent<Util.AlreadyConvertedNERA>() != null) continue;
+                    if (vic_go.GetComponent<Util.HasBRAT>() != null) continue;
+                    if (vic.FriendlyName == "M2 Bradley")
                     {
-                        if (armor_go.transform.Find("Hull Front Alu 5083/M2 Hull ERA Array(Clone)")) continue;
-                        GameObject m2_hull_array = GameObject.Instantiate(BRAT.BRAT_m2_hull_array, armor_go.transform.Find("Hull Front Alu 5083"));
-                        m2_hull_array.transform.localEulerAngles = new Vector3(90f, 0f, 0f);
-                        m2_hull_array.transform.localPosition = new Vector3(0f, 0f, 0f);
+                        vic_go.AddComponent<Util.AlreadyConvertedNERA>();
+                        vic_go.AddComponent<Util.HasBRAT>();
+
+                        var hull_late_followers = vic.GetComponent<LateFollowTarget>()._lateFollowers;
+                        GameObject m2_hull_array = GameObject.Instantiate(BRAT.BRAT_m2_hull_array, hull_late_followers.Where(o => o.name == "BRADLEY HULL FOLLOW").First().transform.Find("HULL"));
+
+                        m2_hull_array.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
+                        m2_hull_array.transform.localPosition = new Vector3(0f, 0.269f, 0.112f);
 
                         if (!showERAm2_HullSideLower.Value)
                         {
@@ -98,37 +99,7 @@ namespace NatoEra
                             GameObject.Destroy(m2_hull_array.transform.Find("Hull Upper Array").gameObject);
                         }
 
-                        //GameObject.Destroy(m2_hull_array.transform.Find("Front Upper Array").gameObject);
-                        //GameObject.Destroy(m2_hull_array.transform.Find("Front Headlight Array").gameObject);
-
-                    }
-
-                    /*if (name == "M2 Bradley") continue;
-
-                    if (armor_go.name == "Turret")
-                    {
-                        if (armor_go.transform.Find("Turret Front Alu 7039 1\"/M2 Turret Alignment(Clone)")) continue;
-                        GameObject turret_array = GameObject.Instantiate(BRAT.BRAT_m2_turret_array, armor_go.transform.Find("Turret Front Alu 7039 1\""));
-                        turret_array.transform.localEulerAngles = new Vector3(90f, 0f, 0f);
-                        turret_array.transform.localPosition = new Vector3(0f, 0f, -1.45f);
-                    }*/
-                }
-
-                foreach (GameObject vic_go in NatoERA.vic_gos)
-                {
-                    Vehicle vic = vic_go.GetComponent<Vehicle>();
-
-                    if (vic == null) continue;
-
-                    if (vic_go.GetComponent<Util.AlreadyConvertedNERA>() != null) continue;
-                    if (vic_go.GetComponent<Util.HasBRAT>() != null) continue;
-                    if (vic.FriendlyName == "M2 Bradley")
-                    {
-                        vic_go.AddComponent<Util.AlreadyConvertedNERA>();
-                        vic_go.AddComponent<Util.HasBRAT>();
-
                         Rigidbody m2Rb = vic_go.GetComponent<Rigidbody>();
-
                         int mass_m2_Hull = featherBRAT.Value ? 0 : 2211;
                         int mass_m2_HullSideLower = featherBRAT.Value ? 0 : 825;
                         int mass_m2_HullSideLowerExtended = featherBRAT.Value ? 0 : 118;
