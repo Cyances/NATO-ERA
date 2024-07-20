@@ -9,7 +9,7 @@
 	<li>ARAT-1 weight is 29.48 KG per tile but total value is rounded to the nearest Ones</li>
 	<li>I could not find the weight for BRAT so it is assumed to be the same as ARAT</li>
 	<li>1.2.2: Added code for ARAT detection in AMP 2.6</li>
-	<li>1.2.3: Compatibiltiy for GHPC Update 20240710/.1 (fixed BRAT not appearing)</li>
+	<li>1.2.3: Compatibility for GHPC Update 20240710/.1 (fixed BRAT not appearing)</li>
  	</ul>
 </p>
 
