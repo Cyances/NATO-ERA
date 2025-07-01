@@ -10,3 +10,4 @@ obj/Debug/NatoERA.csproj.FileListAbsolute.txt
 *.json
 *.vsidx
 obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
+obj/Debug/build.force

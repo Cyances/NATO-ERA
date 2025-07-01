@@ -51,9 +51,6 @@
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>D:\Program Files\SteamLibrary\steamapps\common\Gunner HEAT PC\Bin\GHPC_Data\Managed\Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine">
-      <HintPath>D:\Program Files\SteamLibrary\steamapps\common\Gunner HEAT PC\Bin\GHPC_Data\Managed\UnityEngine.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
       <HintPath>D:\Program Files\SteamLibrary\steamapps\common\Gunner HEAT PC\Bin\GHPC_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>

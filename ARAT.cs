@@ -8,13 +8,13 @@ using System.Drawing;
 using GHPC;
 using MelonLoader;
 using MelonLoader.Utils;
-using Thermals;
 using UnityEngine;
 using GHPC.UI.Tips;
 using GHPC.Equipment;
 using HarmonyLib;
 using System.Reflection;
 using System.Reflection.Emit;
+using GHPC.Thermals;
 
 namespace NatoEra
 {
