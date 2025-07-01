@@ -8,7 +8,7 @@ using System.Drawing;
 using GHPC;
 using MelonLoader;
 using MelonLoader.Utils;
-using Thermals;
+using GHPC.Thermals;
 using UnityEngine;
 using GHPC.UI.Tips;
 using GHPC.Equipment;

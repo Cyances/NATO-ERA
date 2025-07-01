@@ -1,4 +1,4 @@
-# NATO ERA v1.2.3
+# NATO ERA v1.2.4
 
 Special thanks to thebeninator for the coding and 3d modelling advice for this mod.
 
